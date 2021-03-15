@@ -4,6 +4,8 @@ public class Reimburse {
 	
 	private int id;
 	private double amount;
+	private String submitted;
+	private String resolved;
 	private String description;
 	private int author;
 	private int status;
@@ -16,10 +18,12 @@ public class Reimburse {
 	
 	}
 	
-	public Reimburse(int id, double amount, String description, int author, int status, int type) {
+	public Reimburse(int id, double amount, String submitted, String resolved, String description, int author, int status, int type) {
 		super();
 		this.id = id;
 		this.amount = amount;
+		this.submitted = submitted;
+		this.resolved = resolved;
 		this.description = description;
 		this.author = author;
 		this.status = status;
@@ -42,6 +46,22 @@ public class Reimburse {
 
 	public void setAmount(double amount) {
 		this.amount = amount;
+	}
+
+	public String getSubmitted() {
+		return submitted;
+	}
+
+	public void setSubmitted(String submitted) {
+		this.submitted = submitted;
+	}
+
+	public String getResolved() {
+		return resolved;
+	}
+
+	public void setResolved(String resolved) {
+		this.resolved = resolved;
 	}
 
 	public String getDescription() {
@@ -78,8 +98,8 @@ public class Reimburse {
 
 	@Override
 	public String toString() {
-		return "Reimburse [id=" + id + ", amount=" + amount + ", description=" + description + ", author=" + author
-				+ ", status=" + status + ", type=" + type + "]";
+		return "Reimburse [id=" + id + ", amount=" + amount + ", submitted=" + submitted + ", resolved=" + resolved
+				+ ", description=" + description + ", author=" + author + ", status=" + status + ", type=" + type + "]";
 	}
 
 	@Override
@@ -92,7 +112,9 @@ public class Reimburse {
 		result = prime * result + author;
 		result = prime * result + ((description == null) ? 0 : description.hashCode());
 		result = prime * result + id;
+		result = prime * result + ((resolved == null) ? 0 : resolved.hashCode());
 		result = prime * result + status;
+		result = prime * result + ((submitted == null) ? 0 : submitted.hashCode());
 		result = prime * result + type;
 		return result;
 	}
@@ -117,12 +139,23 @@ public class Reimburse {
 			return false;
 		if (id != other.id)
 			return false;
+		if (resolved == null) {
+			if (other.resolved != null)
+				return false;
+		} else if (!resolved.equals(other.resolved))
+			return false;
 		if (status != other.status)
+			return false;
+		if (submitted == null) {
+			if (other.submitted != null)
+				return false;
+		} else if (!submitted.equals(other.submitted))
 			return false;
 		if (type != other.type)
 			return false;
 		return true;
 	}
+	
+	
 
-
-}
+	}

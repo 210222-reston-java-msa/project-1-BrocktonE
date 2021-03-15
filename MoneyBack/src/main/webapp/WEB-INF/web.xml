@@ -21,6 +21,15 @@
     <url-pattern>/request</url-pattern>
     <url-pattern>/approverequest</url-pattern>
     <url-pattern>/reimbursementlist</url-pattern>
+    <url-pattern>/reimbursementlistr</url-pattern>
+    <url-pattern>/viewinfo</url-pattern>
+    <url-pattern>/viewinforesolved</url-pattern>
+    <url-pattern>/updateinfo</url-pattern>
+    <url-pattern>/viewemployeeinfo</url-pattern>
+     <url-pattern>/viewallemployees</url-pattern>
+      <url-pattern>/viewallrequests</url-pattern>
+    
+    
     
   </servlet-mapping>
   

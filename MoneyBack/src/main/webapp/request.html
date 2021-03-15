@@ -9,13 +9,14 @@
 	crossorigin="anonymous">
 
 </head>
+    
+
 <body>
+
 <div class="jumbotron jumbotron-fluid">
 <h1 id ="welcome">You are Logged in!</h1>
 		<div class="container">
-			<h1 class="display-4">Welcome, employee,</h1>
-			<p class="lead">Plea login below with your username and
-				password</p>
+			
 		</div>
 	</div>
 	<div class="container-fluid">
@@ -27,7 +28,7 @@
 			<div class="form-group">
 				<label for="amount">Amount</label>
 				<!--  note that the name of the inpu matches to our loginServlet logic -->
-				<input type="text" class="form-control" name="amount" id="amount"
+				<input type="number" required min ="0" step="any" class="form-control" name="amount" id="amount"
 					placeholder="Enter Amount">
 			</div>
 			
@@ -42,12 +43,22 @@
 				<div class="form-group">
 				<label for="type">Type</label>
 				<!--  note that the name of the inpu matches to our loginServlet logic -->
-				<input type="text" class="form-control" name="type" id="type"
+				<input type="number" required min ="1" required max = "4" class="form-control" name="type" id="type"
 					placeholder="Choose 1-4">
 			</div>
 			
+			</div>
 			
-			<div id="warningText"></div>
+				<div class="form-group">
+				<label for="type">Picture</label>
+					<input type ="file" id="objFile" size="50" /><br/><br/>
+    		 <input type ="button" id="cmdUpload"  value="Upload"/>
+			</div>
+			
+			
+			
+			
+
 			
 			<button type="submit" class="btn btn-primary">Submit</button>
 		</form>

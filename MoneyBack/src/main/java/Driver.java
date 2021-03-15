@@ -13,7 +13,9 @@ public class Driver {
 
 	public static void main(String[] args) {
 		
+		ManagerService mg = new ManagerService();
 		
+		System.out.println(mg.findAllR());
 		
 
 	}

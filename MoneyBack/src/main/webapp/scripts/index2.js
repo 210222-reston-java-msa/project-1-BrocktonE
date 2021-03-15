@@ -29,33 +29,23 @@
  
  window.location= "http://localhost:8080/MoneyBack/request.html";
  }
-/*//1. get the XMLHttpRequest Object ie... let xhr =...
-let xhr = new XMLHttpRequest();
-//2. xhr.onreadystatechange
-xhr.onreadystatechange = function() {
-    if (this.readyState === 4 && this.status===200) {
-        console.log("success");
-
-        sessionStorage.setItem('currentUser', this.responseText)
-
-        window.location= "http://localhost:8080/MoneyBack/request.html";
-
-        console.log(sessionStorage.getItem('currentUser'));
-    }
-    if (this.readyState === 4 && this.status === 204) { //204 means no content found but connection made
-            console.log("failed to find user")
-    }
-
-    let childDiv = document.getElementById(`warningText`);
-    childDiv.textContent = "Failed to login! Username of Password is incorrect"
 
 
-}
-
-//3. xhr.open("POST, "wherever out login servlet is located, http:/localhost:8080/EmployeeDBServlets/url for the loginServlet")
-
-xhr.open("POST", "http://localhost:8080/MoneyBack/request")
-
-//4. xhr.send();
- xhr.send()
-}*/
+ function viewrequests() {
+ 
+ window.location= "http://localhost:8080/MoneyBack/viewinfo.html";
+ }
+ 
+ function updateemployeeinfo() {
+ window.location= "http://localhost:8080/MoneyBack/employeeinfo.html";
+ }
+ 
+ function viewallinfo() {
+  window.location= "http://localhost:8080/MoneyBack/seeuserinfo.html";
+ }
+ 
+ 
+ 
+ 
+ 
+ 

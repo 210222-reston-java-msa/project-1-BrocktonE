@@ -7,7 +7,9 @@ import java.util.List;
 import org.apache.log4j.Logger;
 
 import com.revature.models.Approve;
+import com.revature.models.Employee;
 import com.revature.models.Reimburse;
+import com.revature.models.ReimburseR;
 import com.revature.respositories.ManagerDAO;
 import com.revature.respositories.ManagerDAOImpl;
 import com.revature.util.ConnectionUtil;
@@ -52,7 +54,70 @@ public class ManagerService {
 		}
 	}
 	
+	public static List<ReimburseR> findAllR() {
+		List reimbursementListR = eDao.findAllR();
+		log.info(reimbursementListR);
+		
+		if (reimbursementListR !=null) {
+			for(int i = 0; i<reimbursementListR.size(); i++) {
+				System.out.println(reimbursementListR.get(i));
+				
+			}
+			return reimbursementListR;
+		} else {
+			return null;
+		}
+	}
 	
+	
+	public static List<ReimburseR> findEmployeeRequest(int authorId) {
+		List reimbursementListR = eDao.findEmployeeRequest(authorId);
+		log.info(reimbursementListR);
+		
+		if (reimbursementListR !=null) {
+			for(int i = 0; i<reimbursementListR.size(); i++) {
+				System.out.println(reimbursementListR.get(i));
+				
+			}
+			return reimbursementListR;
+		} else {
+			return null;
+		}
 
-
+}
+	
+	public static List<Employee> findAllEmployees() {
+		List employeeList = eDao.findAllEmployees();
+		log.info(employeeList);
+		
+		if (employeeList !=null) {
+			for(int i = 0; i<employeeList.size(); i++) {
+				System.out.println(employeeList.get(i));
+				
+			}
+			return employeeList;
+		} else {
+			return null;
+		}
+		
+	}
+	public static List<ReimburseR> findAllRequests(int authorId) {
+		List reimbursementListR = eDao.findAllRequests(authorId);
+		log.info(reimbursementListR);
+		
+		if (reimbursementListR !=null) {
+			for(int i = 0; i<reimbursementListR.size(); i++) {
+				System.out.println(reimbursementListR.get(i));
+				
+			}
+			return reimbursementListR;
+		} else {
+			return null;
+		}
+	
+	}	
+	
+	
+	
+	
 }

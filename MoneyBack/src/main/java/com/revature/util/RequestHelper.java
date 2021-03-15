@@ -14,12 +14,17 @@ import javax.servlet.http.HttpSession;
 
 import org.apache.log4j.Logger;
 
+import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.revature.models.Approve;
+import com.revature.models.AuthorId;
 import com.revature.models.Employee;
+import com.revature.models.EmployeeInfo;
 import com.revature.models.LoginTemplate;
 import com.revature.models.Reimburse;
+import com.revature.models.ReimburseR;
 import com.revature.models.Request;
+import com.revature.models.Update;
 import com.revature.services.EmployeeService;
 import com.revature.services.ManagerService;
 
@@ -46,8 +51,6 @@ public class RequestHelper {
 
 		String username = loginAttempt.getUsername();
 		String password = loginAttempt.getPassword();
-		
-		
 
 		log.info("User attempted to login with username: " + username);
 
@@ -80,7 +83,7 @@ public class RequestHelper {
 		if (session != null) {
 
 			String username = (String) session.getAttribute("username");
-			log.info(username + "has logged out.");
+			log.info(username + " has logged out.");
 
 			session.invalidate();
 		}
@@ -120,143 +123,304 @@ public class RequestHelper {
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
-		
-	}
-		
-		public static void processLogin2(HttpServletRequest req, HttpServletResponse res) throws IOException {
-
-			// Turn what we recive as the request into a string
-			BufferedReader reader = req.getReader();
-			StringBuilder s = new StringBuilder();
-
-			String line = reader.readLine();
-			while (line != null) {
-				s.append(line);
-				line = reader.readLine();
-			}
-			String body = s.toString();
-			log.info(body);
-
-			LoginTemplate loginAttempt = om.readValue(body, LoginTemplate.class);
-
-			String username = loginAttempt.getUsername();
-			String password = loginAttempt.getPassword();
-
-			log.info("User attempted to login with username: " + username);
-
-			Employee e = EmployeeService.confirmLogin(username, password);
-
-			if (e.getUserRole() !=1) {
-				HttpSession session = req.getSession();
-				session.setAttribute("username", username);
-
-				// attching the print writer to our response
-				PrintWriter pw = res.getWriter();
-				res.setContentType("application/json");
-
-				pw.println(om.writeValueAsString(e));
-
-				log.info("Employee " + username + " has successfully logged in");
-
-			} else {
-				res.setStatus(204);
-			}
 
 	}
 		
-		public static void processRequest(HttpServletRequest req, HttpServletResponse res) throws IOException {
+	public static void processLogin2(HttpServletRequest req, HttpServletResponse res) throws IOException {
 
-			BufferedReader reader = req.getReader();
-			StringBuilder s = new StringBuilder();
+		// Turn what we recive as the request into a string
+		BufferedReader reader = req.getReader();
+		StringBuilder s = new StringBuilder();
 
-			String line = reader.readLine();
-			while (line != null) {
-				s.append(line);
-				line = reader.readLine();
-			}
-			String body = s.toString();
-			log.info(body);
+		String line = reader.readLine();
+		while (line != null) {
+			s.append(line);
+			line = reader.readLine();
+		}
+		String body = s.toString();
+		log.info(body);
 
-			Request request = om.readValue(body, Request.class);
+		LoginTemplate loginAttempt = om.readValue(body, LoginTemplate.class);
 
-			int amount = request.getAmount();
-			String description = request.getDescription();
-			int author = request.getAuthor();
-			int type = request.getType();
-			
-			log.info(request);
-			
+		String username = loginAttempt.getUsername();
+		String password = loginAttempt.getPassword();
 
-			try {
-				EmployeeService.createRequest(request);
-			} catch (SQLException e) {
-				// TODO Auto-generated catch block
-				e.printStackTrace();
-			}
+		log.info("User attempted to login with username: " + username);
 
+		Employee e = EmployeeService.confirmLogin(username, password);
 
-}	
-		
-		public static void processApproveRequest(HttpServletRequest req, HttpServletResponse res) throws IOException {
-		
-			BufferedReader reader = req.getReader();
-			StringBuilder s = new StringBuilder();
+		if (e.getUserRole() != 1) {
+			HttpSession session = req.getSession();
+			session.setAttribute("username", username);
 
-			String line = reader.readLine();
-			while (line != null) {
-				s.append(line);
-				line = reader.readLine();
-			}
-			String body = s.toString();
-			log.info(body);
-
-			Approve approve = om.readValue(body, Approve.class);
-
-			int id = approve.getId();
-			int status = approve.getStatus();
-			int requestId = approve.getRequestId();
-			
-			log.info(approve);
-			
-
-			try {
-				ManagerService.approve(approve);
-			} catch (SQLException e) {
-				// TODO Auto-generated catch block
-				e.printStackTrace();
-			}
-
-
-		
-		
-}	
-		
-		public static void processReimbursementList(HttpServletRequest req, HttpServletResponse res) throws IOException {
+			// attching the print writer to our response
+			PrintWriter pw = res.getWriter();
 			res.setContentType("application/json");
-			
-			List<Reimburse> reimbursementList = ManagerService.findAll();
-			
+
+			pw.println(om.writeValueAsString(e));
+
+			log.info("Employee " + username + " has successfully logged in");
+
+		} else {
+			res.setStatus(204);
+		}
+
+	}
+		
+	public static void processRequest(HttpServletRequest req, HttpServletResponse res) throws IOException {
+
+		BufferedReader reader = req.getReader();
+		StringBuilder s = new StringBuilder();
+
+		String line = reader.readLine();
+		while (line != null) {
+			s.append(line);
+			line = reader.readLine();
+		}
+		String body = s.toString();
+		log.info(body);
+
+		Request request = om.readValue(body, Request.class);
+
+		double amount = request.getAmount();
+		String description = request.getDescription();
+		int author = request.getAuthor();
+		int type = request.getType();
+
+		log.info(request);
+
+		try {
+			EmployeeService.createRequest(request);
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+
+	}
+		
+public static void processApproveRequest(HttpServletRequest req, HttpServletResponse res) throws IOException {
+
+	BufferedReader reader = req.getReader();
+	StringBuilder s = new StringBuilder();
+
+	String line = reader.readLine();
+	while (line != null) {
+		s.append(line);
+		line = reader.readLine();
+	}
+	String body = s.toString();
+	log.info(body);
+
+	Approve approve = om.readValue(body, Approve.class);
+
+	int id = approve.getId();
+	int status = approve.getStatus();
+	int requestId = approve.getRequestId();
+
+	log.info(approve);
+
+	try {
+		ManagerService.approve(approve);
+	} catch (SQLException e) {
+		// TODO Auto-generated catch block
+		e.printStackTrace();
+	}
+
+}
+		
+public static void processReimbursementList(HttpServletRequest req, HttpServletResponse res) throws IOException {
+	res.setContentType("application/json");
+
+	List<Reimburse> reimbursementList = ManagerService.findAll();
+
+	String json = om.writeValueAsString(reimbursementList);
+
+	PrintWriter pw = res.getWriter();
+	pw.println(json);
+
+}
+		
+		public static void processReimbursementListR(HttpServletRequest req, HttpServletResponse res)
+				throws IOException {
+			res.setContentType("application/json");
+
+			List<ReimburseR> reimbursementListR = ManagerService.findAllR();
+
+			String json = om.writeValueAsString(reimbursementListR);
+
+			PrintWriter pw = res.getWriter();
+			pw.println(json);
+
+		}
+		
+		
+		public static void processViewInfo(HttpServletRequest req, HttpServletResponse res) throws IOException {
+			BufferedReader reader = req.getReader();
+			StringBuilder s = new StringBuilder();
+
+			String line = reader.readLine();
+			while (line != null) {
+				s.append(line);
+				line = reader.readLine();
+			}
+			String body = s.toString();
+			log.info(body);
+
+			AuthorId nid = om.readValue(body, AuthorId.class);
+
+			int authorId = nid.getAid();
+
+			log.info(authorId);
+
+			log.info(authorId);
+
+			// int authorId = 2;
+
+			List<ReimburseR> reimbursementList = EmployeeService.findAllR(authorId);
+
 			String json = om.writeValueAsString(reimbursementList);
+
+			PrintWriter pw = res.getWriter();
+			pw.println(json);
+
+		}
+		
+		public static void processViewInfoResolved(HttpServletRequest req, HttpServletResponse res) throws IOException {
+			BufferedReader reader = req.getReader();
+			StringBuilder s = new StringBuilder();
+
+			String line = reader.readLine();
+			while (line != null) {
+				s.append(line);
+				line = reader.readLine();
+			}
+			String body = s.toString();
+			log.info(body);
+
+			AuthorId nid = om.readValue(body, AuthorId.class);
+
+			int authorId = nid.getAid();
+
+			log.info(authorId);
+
+			log.info(authorId);
+
+			// int authorId = 2;
+
+			List<ReimburseR> reimbursementList = EmployeeService.findAllresolved(authorId);
+
+			String json = om.writeValueAsString(reimbursementList);
+
+			PrintWriter pw = res.getWriter();
+			pw.println(json);
+
+		}
+		
+		
+		
+		public static void processUpdateInfo(HttpServletRequest req, HttpServletResponse res) throws IOException {
+
+			BufferedReader reader = req.getReader();
+			StringBuilder s = new StringBuilder();
+
+			String line = reader.readLine();
+			while (line != null) {
+				s.append(line);
+				line = reader.readLine();
+			}
+			String body = s.toString();
+			log.info(body);
+
+			Update update = om.readValue(body, Update.class);
+
+//			int amount = request.getAmount();
+//			String description = request.getDescription();
+//			int author = request.getAuthor();
+//			int type = request.getType();
+
+			log.info(update);
+
+			try {
+				EmployeeService.createUpdate(update);
+			} catch (SQLException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+
+		}
+		public static void processViewEmployeeInfo(HttpServletRequest req, HttpServletResponse res) throws IOException {
+			BufferedReader reader = req.getReader();
+			StringBuilder s = new StringBuilder();
+
+			String line = reader.readLine();
+			while (line != null) {
+				s.append(line);
+				line = reader.readLine();
+			}
+			String body = s.toString();
+			log.info(body);
+
+			AuthorId nid = om.readValue(body, AuthorId.class);
+
+			int authorId = nid.getAid();
+
+			log.info(authorId);
+
+			log.info(authorId);
+
+			// int authorId = 2;
+
+			EmployeeInfo employeeInfo = EmployeeService.getInfo(authorId);
+
+			String json = om.writeValueAsString(employeeInfo);
+
+			PrintWriter pw = res.getWriter();
+			pw.println(json);
+
+		}
+		
+		public static void processViewAllEmployees(HttpServletRequest req, HttpServletResponse res) throws IOException {
 			
-	
-			
-			
+			List<Employee> employeeList = ManagerService.findAllEmployees();
+
+			String json = om.writeValueAsString(employeeList);
+
 			PrintWriter pw = res.getWriter();
 			pw.println(json);
 			
 			
 		}
 		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
+		public static void processViewAllRequests(HttpServletRequest req, HttpServletResponse res) throws IOException {
+			BufferedReader reader = req.getReader();
+			StringBuilder s = new StringBuilder();
+
+			String line = reader.readLine();
+			while (line != null) {
+				s.append(line);
+				line = reader.readLine();
+			}
+			String body = s.toString();
+			log.info(body);
+
+			AuthorId nid = om.readValue(body, AuthorId.class);
+
+			int authorId = nid.getAid();
+
+			log.info(authorId);
+
+			log.info(authorId);
+
+			// int authorId = 2;
+
+			List<ReimburseR> reimbursementList = ManagerService.findAllRequests(authorId);
+
+			String json = om.writeValueAsString(reimbursementList);
+
+			PrintWriter pw = res.getWriter();
+			pw.println(json);
+
+		}
 		
 		
 		

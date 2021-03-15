@@ -88,8 +88,7 @@ xhr.onreadystatechange = function() {
             console.log("failed to find user")
     }
 
-    let childDiv = document.getElementById(`warningText`);
-    childDiv.textContent = "Failed to login! Username of Password is incorrect"
+
 
 
 }

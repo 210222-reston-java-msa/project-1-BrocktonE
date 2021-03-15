@@ -14,7 +14,8 @@
  	<div class="jumbotron">
  		<h1 id ="welcome">You are Logged in!</h1>
  		
- 		<a class="btn btn success" onclick="populateTable()">Build Table</a>
+ 		<a class="btn btn success" onclick="populateTable()">Find all Pending Reimbursement Requests</a>
+ 		<a class="btn btn success" onclick="populateTableResolved()">Find all Resolved Reimbursement Requests</a>
 
  	</div>
  	
@@ -27,19 +28,38 @@
  			<th width="100">
  				ReImbursement Id
  			</th>
+ 			
  			<th width="100">
  				Amount
  			</th>
+ 			
+ 			<th width="100">
+ 				Submitted Date
+ 			</th>
+ 			
+ 			<th width="100">
+ 				Resolved Date
+ 			</th>
+ 			
+ 			
  			<th width="100">
  				Description
  			</th>
- 				<th width="100">
+ 			
+ 			<th width="100">
  				Author
  			</th>
- 				<th width="100">
+ 			
+ 			<th width="100">
+ 				Resolver
+ 			</th>
+ 			
+ 			
+ 			<th width="100">
  				Status
  			</th>
- 				<th width="100">
+ 			
+ 			<th width="100">
  				Type
  			</th>
  			
@@ -58,17 +78,6 @@
  
  	</table>
  			
- 			
- 	
- 	
- 	
- 	
- 	
- 	
- 	
- 	
- 	
- 	
  
  <script src="scripts/reimbursementlist.js">
 

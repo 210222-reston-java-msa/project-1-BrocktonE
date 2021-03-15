@@ -37,6 +37,18 @@ public class Employee {
 
 	
 	}
+	public Employee(int id, String firstName, String lastName, String eMail) {
+	super();
+	this.id = id;
+	this.firstName = firstName;
+	this.lastName = lastName;
+	this.eMail = eMail;
+	
+	
+}
+	
+	
+
 
 	public int getId() {
 		return id;

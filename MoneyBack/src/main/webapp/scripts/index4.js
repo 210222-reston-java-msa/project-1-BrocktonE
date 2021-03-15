@@ -13,8 +13,9 @@ console.log(userString);
 	 console.log(currentUser);
 	 
 	 if (currentUser != null) {
-		 welcome.innerHTML = "Welcome " + currentUser.firstName + " " + currentUser.lastName + " , to the Employee Home Page";
+		 welcome.innerHTML =  currentUser.firstName + " please enter the information below to submit a Reimbursement Request";
 	 }
+	 
  }
  
  function sendRequest() {

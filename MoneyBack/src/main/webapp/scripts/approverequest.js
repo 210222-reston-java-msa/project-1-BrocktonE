@@ -20,6 +20,8 @@ console.log(userString);
  let requestId = document.getElementById('requestId').value;
  let status = document.getElementById('approve').value;
  
+ console.log(requestId);
+ console.log(status);
  
  let approve = { 
  	id :currentUser.id,

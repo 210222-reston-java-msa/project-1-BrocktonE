@@ -15,3 +15,108 @@ org.postgresql.util.PSQLException: ERROR: duplicate key value violates unique co
 	at com.revature.util.ConnectionUtil.main(ConnectionUtil.java:63)
 2021-03-06 14:38:09 INFO  ConnectionUtil:43 - connection successful
 2021-03-06 14:38:09 INFO  ConnectionUtil:53 - connected to db
+2021-03-13 16:02:05 INFO  ConnectionUtil:43 - connection successful
+2021-03-13 16:02:05 INFO  ConnectionUtil:53 - connected to db
+2021-03-13 16:02:05 INFO  ManagerService:91 - [Employee [id=3, username=null, password=null, firstName=John1, lastName=Smith1, eMail=JS1@gmail.com, userRole=0], Employee [id=4, username=null, password=null, firstName=John1, lastName=Smith1, eMail=JS21@gmail.com, userRole=0], Employee [id=5, username=null, password=null, firstName=Tester1, lastName=McTestface, eMail=Cool@gmail, userRole=0], Employee [id=2, username=null, password=null, firstName=Testy, lastName=TryHard, eMail=Onetime@gmail.com, userRole=0]]
+2021-03-13 16:02:45 INFO  ConnectionUtil:43 - connection successful
+2021-03-13 16:02:45 INFO  ConnectionUtil:53 - connected to db
+2021-03-13 16:02:45 INFO  ManagerService:59 - [ReimburseR [id=1, amount=500.22, submitted=2020-03-05 00:00:02, resolved=2021-03-11 18:38:37.317263, description=For travel, author=2, resolver=1, status=2, type=1], ReimburseR [id=2, amount=600.32, submitted=2019-04-06 20:20:02, resolved=2021-03-11 18:38:38.912021, description=For Food, author=2, resolver=1, status=2, type=3], ReimburseR [id=16, amount=657.0, submitted=2021-03-09 16:03:54.863412, resolved=2021-03-11 18:38:40.577717, description=Last one, author=2, resolver=1, status=2, type=3], ReimburseR [id=11, amount=500.0, submitted=null, resolved=2021-03-11 18:38:42.181912, description=l;jkdsfak, author=2, resolver=1, status=2, type=3], ReimburseR [id=6, amount=500.0, submitted=null, resolved=2021-03-11 18:38:43.514715, description=Food, author=0, resolver=1, status=2, type=2], ReimburseR [id=17, amount=600.0, submitted=2021-03-09 22:56:07.820194, resolved=2021-03-11 18:38:45.055364, description=Food, author=2, resolver=1, status=2, type=2], ReimburseR [id=12, amount=459.23, submitted=null, resolved=2021-03-11 18:38:46.547377, description=For food, author=2, resolver=1, status=2, type=1], ReimburseR [id=14, amount=569.0, submitted=2021-03-07 21:15:35.692404, resolved=2021-03-11 18:38:48.042621, description=For food, author=2, resolver=1, status=2, type=1], ReimburseR [id=15, amount=365.0, submitted=2021-03-07 21:17:38.380499, resolved=2021-03-11 18:38:49.60229, description=asdf, author=2, resolver=1, status=2, type=2], ReimburseR [id=13, amount=999.99, submitted=null, resolved=2021-03-11 18:38:50.852147, description=For food, author=2, resolver=1, status=2, type=1], ReimburseR [id=4, amount=505.22, submitted=null, resolved=2021-03-11 18:38:52.757993, description=For food, author=2, resolver=1, status=2, type=1], ReimburseR [id=9, amount=700.0, submitted=null, resolved=2021-03-11 18:38:54.827902, description=hjggh, author=0, resolver=1, status=2, type=3], ReimburseR [id=8, amount=602.0, submitted=null, resolved=2021-03-11 09:35:06.321699, description=big food2, author=0, resolver=1, status=2, type=3], ReimburseR [id=7, amount=600.0, submitted=null, resolved=2021-03-11 18:38:56.35271, description=time food, author=0, resolver=1, status=2, type=3], ReimburseR [id=10, amount=600.0, submitted=null, resolved=2021-03-11 18:38:57.553672, description=Travel, author=0, resolver=1, status=2, type=3], ReimburseR [id=18, amount=500.0, submitted=2021-03-11 21:31:57.732579, resolved=2021-03-12 21:15:47.273641, description=Food, author=2, resolver=1, status=2, type=2]]
+2021-03-14 21:32:33 INFO  ConnectionUtil:43 - connection successful
+2021-03-14 21:32:33 INFO  ConnectionUtil:53 - connected to db
+2021-03-14 21:32:34 INFO  ConnectionUtil:43 - connection successful
+2021-03-14 21:32:34 INFO  ConnectionUtil:53 - connected to db
+2021-03-14 21:33:08 INFO  ConnectionUtil:43 - connection successful
+2021-03-14 21:33:08 INFO  ConnectionUtil:53 - connected to db
+2021-03-14 21:33:09 INFO  ConnectionUtil:43 - connection successful
+2021-03-14 21:33:09 INFO  ConnectionUtil:53 - connected to db
+2021-03-14 21:33:26 INFO  ConnectionUtil:43 - connection successful
+2021-03-14 21:33:26 INFO  ConnectionUtil:53 - connected to db
+2021-03-14 21:33:27 INFO  ConnectionUtil:43 - connection successful
+2021-03-14 21:33:27 INFO  ConnectionUtil:53 - connected to db
+2021-03-14 21:34:36 INFO  ConnectionUtil:43 - connection successful
+2021-03-14 21:34:36 INFO  ConnectionUtil:53 - connected to db
+2021-03-14 21:34:36 INFO  ConnectionUtil:43 - connection successful
+2021-03-14 21:34:36 INFO  ConnectionUtil:53 - connected to db
+2021-03-14 21:35:14 INFO  ConnectionUtil:43 - connection successful
+2021-03-14 21:35:14 INFO  ConnectionUtil:53 - connected to db
+2021-03-14 21:35:14 INFO  ConnectionUtil:43 - connection successful
+2021-03-14 21:35:14 INFO  ConnectionUtil:53 - connected to db
+2021-03-14 21:37:13 INFO  ConnectionUtil:43 - connection successful
+2021-03-14 21:37:13 INFO  ConnectionUtil:53 - connected to db
+2021-03-14 21:37:14 INFO  ConnectionUtil:43 - connection successful
+2021-03-14 21:37:14 INFO  ConnectionUtil:53 - connected to db
+2021-03-14 21:39:29 INFO  ConnectionUtil:43 - connection successful
+2021-03-14 21:39:29 INFO  ConnectionUtil:53 - connected to db
+2021-03-14 21:39:30 INFO  ConnectionUtil:43 - connection successful
+2021-03-14 21:39:30 INFO  ConnectionUtil:53 - connected to db
+2021-03-14 21:39:37 INFO  ConnectionUtil:43 - connection successful
+2021-03-14 21:39:37 INFO  ConnectionUtil:53 - connected to db
+2021-03-14 21:39:45 INFO  ConnectionUtil:43 - connection successful
+2021-03-14 21:39:45 INFO  ConnectionUtil:53 - connected to db
+2021-03-14 21:46:25 INFO  ConnectionUtil:43 - connection successful
+2021-03-14 21:46:25 INFO  ConnectionUtil:53 - connected to db
+2021-03-14 21:46:25 INFO  ConnectionUtil:43 - connection successful
+2021-03-14 21:46:25 INFO  ConnectionUtil:53 - connected to db
+2021-03-14 21:46:26 INFO  ConnectionUtil:43 - connection successful
+2021-03-14 21:46:26 INFO  ConnectionUtil:53 - connected to db
+2021-03-14 21:46:26 INFO  ManagerService:59 - [ReimburseR [id=4, amount=50000.36, submitted=2021-03-14 13:03:00.000166, resolved=2021-03-14 14:16:08.96891, description=Vegas, author=2, resolver=1, status=3, type=2], ReimburseR [id=8, amount=3500.25, submitted=2021-03-14 13:06:39.088314, resolved=2021-03-14 14:16:28.819112, description=Boat, author=3, resolver=1, status=3, type=2], ReimburseR [id=9, amount=352.25, submitted=2021-03-14 13:08:08.341796, resolved=2021-03-14 14:16:31.190025, description=Hotel, author=4, resolver=1, status=2, type=4], ReimburseR [id=1, amount=5005.22, submitted=2021-03-14 12:58:47.024346, resolved=2021-03-14 14:16:08, description=For food, author=2, resolver=1, status=2, type=1]]
+2021-03-14 21:58:46 INFO  ConnectionUtil:43 - connection successful
+2021-03-14 21:58:46 INFO  ConnectionUtil:53 - connected to db
+2021-03-14 21:58:46 INFO  ConnectionUtil:43 - connection successful
+2021-03-14 21:58:46 INFO  ConnectionUtil:53 - connected to db
+2021-03-14 21:58:46 INFO  ConnectionUtil:43 - connection successful
+2021-03-14 21:58:46 INFO  ConnectionUtil:53 - connected to db
+2021-03-14 21:58:46 INFO  ManagerService:106 - [ReimburseR [id=5, amount=600.0, submitted=2021-03-14 13:03:42.420764, resolved=null, description=Food, author=5, resolver=0, status=1, type=3], ReimburseR [id=6, amount=500.33, submitted=2021-03-14 13:04:04.413548, resolved=null, description=Play, author=5, resolver=0, status=1, type=4]]
+2021-03-14 21:58:47 INFO  ConnectionUtil:43 - connection successful
+2021-03-14 21:58:47 INFO  ConnectionUtil:53 - connected to db
+2021-03-14 21:58:47 INFO  ManagerService:59 - [ReimburseR [id=4, amount=50000.36, submitted=2021-03-14 13:03:00.000166, resolved=2021-03-14 14:16:08.96891, description=Vegas, author=2, resolver=1, status=3, type=2], ReimburseR [id=8, amount=3500.25, submitted=2021-03-14 13:06:39.088314, resolved=2021-03-14 14:16:28.819112, description=Boat, author=3, resolver=1, status=3, type=2], ReimburseR [id=9, amount=352.25, submitted=2021-03-14 13:08:08.341796, resolved=2021-03-14 14:16:31.190025, description=Hotel, author=4, resolver=1, status=2, type=4], ReimburseR [id=1, amount=5005.22, submitted=2021-03-14 12:58:47.024346, resolved=2021-03-14 14:16:08, description=For food, author=2, resolver=1, status=2, type=1]]
+2021-03-14 21:59:00 INFO  ConnectionUtil:43 - connection successful
+2021-03-14 21:59:00 INFO  ConnectionUtil:53 - connected to db
+2021-03-14 21:59:00 INFO  ConnectionUtil:43 - connection successful
+2021-03-14 21:59:00 INFO  ConnectionUtil:53 - connected to db
+2021-03-14 21:59:01 INFO  ConnectionUtil:43 - connection successful
+2021-03-14 21:59:01 INFO  ConnectionUtil:53 - connected to db
+2021-03-14 21:59:01 INFO  ManagerService:106 - []
+2021-03-14 21:59:01 INFO  ConnectionUtil:43 - connection successful
+2021-03-14 21:59:01 INFO  ConnectionUtil:53 - connected to db
+2021-03-14 21:59:01 INFO  ManagerService:59 - [ReimburseR [id=4, amount=50000.36, submitted=2021-03-14 13:03:00.000166, resolved=2021-03-14 14:16:08.96891, description=Vegas, author=2, resolver=1, status=3, type=2], ReimburseR [id=8, amount=3500.25, submitted=2021-03-14 13:06:39.088314, resolved=2021-03-14 14:16:28.819112, description=Boat, author=3, resolver=1, status=3, type=2], ReimburseR [id=9, amount=352.25, submitted=2021-03-14 13:08:08.341796, resolved=2021-03-14 14:16:31.190025, description=Hotel, author=4, resolver=1, status=2, type=4], ReimburseR [id=1, amount=5005.22, submitted=2021-03-14 12:58:47.024346, resolved=2021-03-14 14:16:08, description=For food, author=2, resolver=1, status=2, type=1]]
+2021-03-14 21:59:58 INFO  ConnectionUtil:43 - connection successful
+2021-03-14 21:59:58 INFO  ConnectionUtil:53 - connected to db
+2021-03-14 21:59:59 INFO  ConnectionUtil:43 - connection successful
+2021-03-14 21:59:59 INFO  ConnectionUtil:53 - connected to db
+2021-03-14 21:59:59 INFO  ConnectionUtil:43 - connection successful
+2021-03-14 21:59:59 INFO  ConnectionUtil:53 - connected to db
+2021-03-14 21:59:59 INFO  ManagerService:106 - []
+2021-03-14 22:00:00 INFO  ConnectionUtil:43 - connection successful
+2021-03-14 22:00:00 INFO  ConnectionUtil:53 - connected to db
+2021-03-14 22:00:00 INFO  ManagerService:59 - [ReimburseR [id=4, amount=50000.36, submitted=2021-03-14 13:03:00.000166, resolved=2021-03-14 14:16:08.96891, description=Vegas, author=2, resolver=1, status=3, type=2], ReimburseR [id=8, amount=3500.25, submitted=2021-03-14 13:06:39.088314, resolved=2021-03-14 14:16:28.819112, description=Boat, author=3, resolver=1, status=3, type=2], ReimburseR [id=9, amount=352.25, submitted=2021-03-14 13:08:08.341796, resolved=2021-03-14 14:16:31.190025, description=Hotel, author=4, resolver=1, status=2, type=4], ReimburseR [id=1, amount=5005.22, submitted=2021-03-14 12:58:47.024346, resolved=2021-03-14 14:16:08, description=For food, author=2, resolver=1, status=2, type=1]]
+2021-03-14 22:00:59 INFO  ConnectionUtil:43 - connection successful
+2021-03-14 22:00:59 INFO  ConnectionUtil:53 - connected to db
+2021-03-14 22:01:00 INFO  ConnectionUtil:43 - connection successful
+2021-03-14 22:01:00 INFO  ConnectionUtil:53 - connected to db
+2021-03-14 22:01:00 INFO  ConnectionUtil:43 - connection successful
+2021-03-14 22:01:00 INFO  ConnectionUtil:53 - connected to db
+2021-03-14 22:01:00 INFO  ManagerService:106 - []
+2021-03-14 22:01:00 INFO  ConnectionUtil:43 - connection successful
+2021-03-14 22:01:00 INFO  ConnectionUtil:53 - connected to db
+2021-03-14 22:01:00 INFO  ManagerService:59 - [ReimburseR [id=4, amount=50000.36, submitted=2021-03-14 13:03:00.000166, resolved=2021-03-14 14:16:08.96891, description=Vegas, author=2, resolver=1, status=3, type=2], ReimburseR [id=8, amount=3500.25, submitted=2021-03-14 13:06:39.088314, resolved=2021-03-14 14:16:28.819112, description=Boat, author=3, resolver=1, status=3, type=2], ReimburseR [id=9, amount=352.25, submitted=2021-03-14 13:08:08.341796, resolved=2021-03-14 14:16:31.190025, description=Hotel, author=4, resolver=1, status=2, type=4], ReimburseR [id=1, amount=5005.22, submitted=2021-03-14 12:58:47.024346, resolved=2021-03-14 14:16:08, description=For food, author=2, resolver=1, status=2, type=1]]
+2021-03-14 22:07:43 INFO  ConnectionUtil:43 - connection successful
+2021-03-14 22:07:43 INFO  ConnectionUtil:53 - connected to db
+2021-03-14 22:07:43 INFO  ConnectionUtil:43 - connection successful
+2021-03-14 22:07:43 INFO  ConnectionUtil:53 - connected to db
+2021-03-14 22:07:43 INFO  ConnectionUtil:43 - connection successful
+2021-03-14 22:07:43 INFO  ConnectionUtil:53 - connected to db
+2021-03-14 22:07:43 INFO  ManagerService:106 - []
+2021-03-14 22:07:44 INFO  ConnectionUtil:43 - connection successful
+2021-03-14 22:07:44 INFO  ConnectionUtil:53 - connected to db
+2021-03-14 22:07:44 INFO  ManagerService:59 - [ReimburseR [id=4, amount=50000.36, submitted=2021-03-14 13:03:00.000166, resolved=2021-03-14 14:16:08.96891, description=Vegas, author=2, resolver=1, status=3, type=2], ReimburseR [id=8, amount=3500.25, submitted=2021-03-14 13:06:39.088314, resolved=2021-03-14 14:16:28.819112, description=Boat, author=3, resolver=1, status=3, type=2], ReimburseR [id=9, amount=352.25, submitted=2021-03-14 13:08:08.341796, resolved=2021-03-14 14:16:31.190025, description=Hotel, author=4, resolver=1, status=2, type=4], ReimburseR [id=1, amount=5005.22, submitted=2021-03-14 12:58:47.024346, resolved=2021-03-14 14:16:08, description=For food, author=2, resolver=1, status=2, type=1]]
+2021-03-15 10:19:19 INFO  ConnectionUtil:43 - connection successful
+2021-03-15 10:19:19 INFO  ConnectionUtil:53 - connected to db
+2021-03-15 10:19:19 INFO  ConnectionUtil:43 - connection successful
+2021-03-15 10:19:19 INFO  ConnectionUtil:53 - connected to db
+2021-03-15 10:19:20 INFO  ConnectionUtil:43 - connection successful
+2021-03-15 10:19:20 INFO  ConnectionUtil:53 - connected to db
+2021-03-15 10:19:20 INFO  ManagerService:106 - []
+2021-03-15 10:19:20 INFO  ConnectionUtil:43 - connection successful
+2021-03-15 10:19:20 INFO  ConnectionUtil:53 - connected to db
+2021-03-15 10:19:20 INFO  ManagerService:59 - [ReimburseR [id=4, amount=50000.36, submitted=2021-03-14 13:03:00.000166, resolved=2021-03-14 14:16:08.96891, description=Vegas, author=2, resolver=1, status=3, type=2], ReimburseR [id=8, amount=3500.25, submitted=2021-03-14 13:06:39.088314, resolved=2021-03-14 14:16:28.819112, description=Boat, author=3, resolver=1, status=3, type=2], ReimburseR [id=9, amount=352.25, submitted=2021-03-14 13:08:08.341796, resolved=2021-03-14 14:16:31.190025, description=Hotel, author=4, resolver=1, status=2, type=4], ReimburseR [id=1, amount=5005.22, submitted=2021-03-14 12:58:47.024346, resolved=2021-03-14 14:16:08, description=For food, author=2, resolver=1, status=2, type=1], ReimburseR [id=2, amount=500.33, submitted=2021-03-14 13:02:11.984429, resolved=2021-03-15 10:16:21.067639, description=Food, author=2, resolver=1, status=2, type=3], ReimburseR [id=3, amount=5500.23, submitted=2021-03-14 13:02:44.178722, resolved=2021-03-15 10:16:22.012514, description=Night Out, author=2, resolver=1, status=2, type=2], ReimburseR [id=5, amount=600.0, submitted=2021-03-14 13:03:42.420764, resolved=2021-03-15 10:16:22.506638, description=Food, author=5, resolver=1, status=2, type=3], ReimburseR [id=6, amount=500.33, submitted=2021-03-14 13:04:04.413548, resolved=2021-03-15 10:16:23.070324, description=Play, author=5, resolver=1, status=3, type=4], ReimburseR [id=7, amount=10.5, submitted=2021-03-14 13:06:28.111035, resolved=2021-03-15 10:16:23.640486, description=McDonalds, author=3, resolver=1, status=2, type=3], ReimburseR [id=10, amount=156.36, submitted=2021-03-14 13:08:19.046276, resolved=2021-03-15 10:16:24.351484, description=Car, author=4, resolver=1, status=2, type=2]]
